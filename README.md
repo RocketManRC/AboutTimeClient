@@ -5,7 +5,7 @@ A command line application to adjust the system clock on MacOS, Linux and Window
 I developed this cross platform application to assist with running the amateur radio digital communication programs JS8Call and WSJT-X when operating off the grid (i.e. with no internet connection). This is because those applications require the computer clock to be within 2 seconds of UTC.
 
 # Building the Application
-The only requirement for building is a C++11 compiler.
+I am reluctant to publish binaries particularly for Windows so you have to build it yourself! The only requirement for building is a C++11 compiler and I have tested this with Mingw-x64 and the Microsoft command line tools on Windows. On Linux and MacOS g++ can be used directly as shown below (note that you have to install Xcode on MacOS even if you are only going to use the command line tools).
  
 I use the following two platform independent libraries:
 
@@ -31,10 +31,10 @@ In order to set the clock this application has to be run with administor privile
 
 The command line options are as follows:
 
-  -i, --init        False
-  -p, --port PORT   Port
-  -h, --help        Print help
-  -o, --offset arg  Offset
+	-i, --init        False
+	-p, --port PORT   Port
+	-h, --help        Print help
+	-o, --offset arg  Offset
 
 
 The port option is only needed when syncing time to an external source (undocumented for now).
