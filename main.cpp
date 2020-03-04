@@ -1,11 +1,11 @@
 /*
-    AboutTimeClient - A command line program to adjust the system clock. This can be
+    AboutTimeClient - A command line application to adjust the system clock. This can be
     used standalone to modify the clock by an offset or it can synchronize to
     an external time source connected via a serial port. The time source could be a
     real time clock (RTC) module and/or GPS.
  
     This program can be built and run on a Windows PC, a Linux box (including the
-    Raspberry Pi) and on MacOS. The only requirment for building is a C++11 compiler.
+    Raspberry Pi) and on MacOS. The only requirement for building is a C++11 compiler.
  
     I use the following two platform independent libraries:
         serial - https://github.com/yan9a/serial (serial port library)
