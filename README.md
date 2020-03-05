@@ -16,15 +16,15 @@ Both of those libraries are licensed under the MIT license and are included in t
  
 Building on Windows with MS tools (from the developer command prompt):
 
-    cl /EHsc main.cpp ceSerial.cpp /link /OUT:AboutTimeClient.exe
+    c:\Projects\AboutTimeClient> cl /EHsc main.cpp ceSerial.cpp /link /OUT:AboutTimeClient.exe
     
 Building on Windows with mingw-x64 (from the command prompt after path is updated):
 
-    g++ main.cpp ceSerial.cpp -o AboutTimeClient.exe -std=c++11
+    C:\Projects\AboutTimeClient> g++ main.cpp ceSerial.cpp -o AboutTimeClient.exe -std=c++11
     
-Building on MacOS or Linux (including Raspian):
+Building on MacOS or Linux (including Raspian) from the terminal:
 
-    g++ main.cpp ceSerial.cpp -o AboutTimeClient -std=c++11
+    pi@RPi4BRadio:~/Projects/AboutTimeClient $ g++ main.cpp ceSerial.cpp -o AboutTimeClient -std=c++11
         
 # Running the Application
 In order to set the clock this application has to be run with administor priviledges, this means run under a command prompt that has been opened to run as administrator on Windows and use sudo on MacOS or Linux.
@@ -41,6 +41,20 @@ The port option is only needed when syncing time to an external source (undocume
 
 Here is an example to add 0.5 seconds to the clock:
 
-AboutTimeClient -i -o 0.5
+	pi@RPi4BRadio:~/Projects/AboutTimeClient $ ./AboutTimeClient -i -o 0.5
 
 Note that if your computer is connected to the Internet and is using NTP to sync the clock then it most likely will change the time back right away.
+
+# AboutTimeClient in Action
+WSJT-X decoding FT8 and showing a time offset of about 1.1 seconds:
+
+![Photo](images/wsjtx1.png)
+
+Applying a -1.1 second correction:
+
+![Photo](images/abouttime1.png)
+
+WSJT-X after the time correction:
+
+![Photo](images/wsjtx2.png)
+
