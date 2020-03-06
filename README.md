@@ -37,7 +37,7 @@ The command line options are as follows:
 	-o, --offset arg  Offset
 
 
-The port option is only needed when syncing time to an external source (undocumented for now).
+The port option is only needed when syncing time to an external source (see this project: https://github.com/RocketManRC/AboutTimeServer).
 
 Here is an example to add 0.5 seconds to the clock:
 
